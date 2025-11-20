@@ -1,0 +1,42 @@
+[
+  {
+    "id": "CUST001",
+    "name": "Nguyễn Văn An",
+    "email": "nguyen.van.an@email.com",
+    "address": "123 Đường Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+    "phone": "0901-234-567",
+    "registeredAt": "2024-01-15T09:30:00Z"
+  },
+  {
+    "id": "CUST002",
+    "name": "Trần Thị Bình",
+    "email": "tran.thi.binh@gmail.com",
+    "address": "456 Đường Nguyễn Huệ, Quận 3, TP. Hồ Chí Minh",
+    "phone": "0912-345-678",
+    "registeredAt": "2024-02-20T14:15:00Z"
+  },
+  {
+    "id": "CUST003",
+    "name": "Lê Minh Cường",
+    "email": "le.minh.cuong@yahoo.com",
+    "address": "789 Đường Hai Bà Trưng, Quận Đống Đa, Hà Nội",
+    "phone": null,
+    "registeredAt": "2024-03-10T10:45:00Z"
+  },
+  {
+    "id": "CUST004",
+    "name": "Phạm Thu Diễm",
+    "email": "pham.thu.diem@outlook.com",
+    "address": "321 Đường Trần Phú, Quận Ba Đình, Hà Nội",
+    "phone": "0987-654-321",
+    "registeredAt": "2024-04-05T16:20:00Z"
+  },
+  {
+    "id": "CUST005",
+    "name": "Hoàng Văn Em",
+    "email": "hoang.van.em@company.vn",
+    "address": "654 Đường Võ Văn Tần, Quận 5, TP. Hồ Chí Minh",
+    "phone": "0923-456-789",
+    "registeredAt": "2024-05-12T11:30:00Z"
+  }
+]

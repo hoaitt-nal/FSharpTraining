@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Shop application - Models -->
+    <Compile Include="Models/Domain.fs" />
+    
+    <!-- Shop application - Data Access Layer -->
+    <Compile Include="DataAccess/StringUtils.fs" />
+    <Compile Include="DataAccess/FileOperations.fs" />
+    <Compile Include="DataAccess/JsonHandler.fs" />
+    <Compile Include="DataAccess/ProductRepository.fs" />
+    <Compile Include="DataAccess/CustomerRepository.fs" />
+    <Compile Include="DataAccess/OrderRepository.fs" />
+    
+    <!-- Shop application - Business Logic -->
+    <Compile Include="Business/ErrorHandling.fs" />
+    <Compile Include="Business/Pipelines.fs" />
+    
+    <!-- Main program -->
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
