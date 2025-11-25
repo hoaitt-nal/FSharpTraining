@@ -1,0 +1,17 @@
+# Environment files - keep secrets safe!
+.env
+
+# Build outputs
+bin/
+obj/
+
+# IDE files
+.vs/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

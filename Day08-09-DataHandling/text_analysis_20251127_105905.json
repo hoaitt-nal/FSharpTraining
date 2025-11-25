@@ -1,0 +1,92 @@
+[
+  {
+    "FileName": "sample1.txt",
+    "WordCount": 15,
+    "CharacterCount": 72,
+    "LineCount": 1,
+    "WordFrequencies": [
+      {
+        "Word": "the",
+        "Count": 3
+      },
+      {
+        "Word": "quick",
+        "Count": 2
+      },
+      {
+        "Word": "brown",
+        "Count": 2
+      },
+      {
+        "Word": "fox",
+        "Count": 2
+      },
+      {
+        "Word": "jumps",
+        "Count": 1
+      }
+    ],
+    "MostCommonWord": "the",
+    "FileSize": 72
+  },
+  {
+    "FileName": "sample2.txt",
+    "WordCount": 13,
+    "CharacterCount": 91,
+    "LineCount": 1,
+    "WordFrequencies": [
+      {
+        "Word": "f#",
+        "Count": 2
+      },
+      {
+        "Word": "programming",
+        "Count": 2
+      },
+      {
+        "Word": "and",
+        "Count": 2
+      },
+      {
+        "Word": "language",
+        "Count": 1
+      },
+      {
+        "Word": "is",
+        "Count": 1
+      }
+    ],
+    "MostCommonWord": "f#",
+    "FileSize": 91
+  },
+  {
+    "FileName": "sample3.txt",
+    "WordCount": 13,
+    "CharacterCount": 92,
+    "LineCount": 1,
+    "WordFrequencies": [
+      {
+        "Word": "data",
+        "Count": 1
+      },
+      {
+        "Word": "analysis",
+        "Count": 1
+      },
+      {
+        "Word": "requires",
+        "Count": 1
+      },
+      {
+        "Word": "careful",
+        "Count": 1
+      },
+      {
+        "Word": "handling",
+        "Count": 1
+      }
+    ],
+    "MostCommonWord": "data",
+    "FileSize": 92
+  }
+]
