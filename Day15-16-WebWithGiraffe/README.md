@@ -30,6 +30,122 @@
 - Phải unique trong cùng một partition
 - Được sử dụng cho point reads (ReadItemAsync)
 
+## 📚 Các khái niệm chính trong Azure Cognitive Search
+
+### 1. SEARCH INDEX: Container for searchable content
+- Tương đương với database table nhưng được tối ưu cho full-text search
+- Chứa documents với defined schema (fields)
+- Support nhiều data types: string, int, double, boolean, datetime, collection
+- Có thể configure analyzers cho language-specific search
+
+### 2. SEARCH DOCUMENT: Individual searchable record in index
+- Tương đương với row trong SQL hoặc item trong Cosmos DB
+- Phải có key field (unique identifier)
+- Có thể có multiple searchable, filterable, sortable, facetable fields
+- Maximum size: 16 MB per document
+
+### 3. FIELDS: Properties/columns trong search document
+**Field Attributes:**
+- `IsKey`: Unique identifier (chỉ có 1 field)
+- `IsSearchable`: Enable full-text search trên field này
+- `IsFilterable`: Có thể dùng trong $filter queries
+- `IsSortable`: Có thể sort results theo field này
+- `IsFacetable`: Enable faceted navigation
+- `IsRetrievable`: Field sẽ return trong search results (default: true)
+
+### 4. ANALYZERS: Text processing for search
+- **Standard Analyzer**: Default, works cho most languages
+- **Language Analyzers**: Optimized cho specific languages (en.microsoft, vi.lucene, etc.)
+- **Custom Analyzers**: Tự define tokenization và filtering rules
+- Xử lý: tokenization, lowercasing, removing stop words, stemming
+
+### 5. SEARCH QUERIES: Cách query data từ index
+**Simple Query:**
+```
+search=coffee&$top=10
+```
+
+**Advanced Query với OData:**
+```
+search=coffee&
+$filter=price le 20 and category eq 'Beverages'&
+$orderby=rating desc&
+$top=10&
+$skip=0
+```
+
+### 6. SCORING & RANKING: Relevance calculation
+- **TF-IDF**: Term frequency - Inverse document frequency
+- **BM25**: Default ranking algorithm (Better than TF-IDF)
+- **Scoring Profiles**: Custom boost rules cho specific fields
+- **freshnesBoost**: Boost recent documents
+- **magnitudeBoost**: Boost by numeric field values
+
+### 7. INDEXERS (Optional): Automatic data sync
+- Pull data từ data sources (Azure SQL, Cosmos DB, Blob Storage)
+- Schedule automatic updates
+- Change detection cho incremental indexing
+- Không dùng trong project này (dùng manual push indexing)
+
+### 8. SKILLSETS (AI Enrichment - Advanced):
+- Extract text từ images (OCR)
+- Entity recognition
+- Key phrase extraction
+- Language detection
+- Sentiment analysis
+- **Không implement trong project này**
+
+### 9. SUGGESTER: Autocomplete và search suggestions
+```fsharp
+// Configure trong index definition
+Suggester = new SearchSuggester("sg", ["firstName", "lastName", "city"])
+
+// Usage:
+let suggestions = searchClient.Suggest("joh", "sg")
+// Returns: John, Johnson, Johnny...
+```
+
+### 10. FACETS: Aggregated counts for filtering
+```fsharp
+// Request:
+facet=category&facet=loyaltyTier
+
+// Response:
+{
+  "facets": {
+    "category": [
+      { "value": "Premium", "count": 45 },
+      { "value": "Standard", "count": 120 }
+    ],
+    "loyaltyTier": [
+      { "value": "Gold", "count": 30 },
+      { "value": "Silver", "count": 50 },
+      { "value": "Bronze", "count": 85 }
+    ]
+  }
+}
+```
+
+### 🔄 Cosmos DB vs Azure Search Integration Pattern:
+```
+┌─────────────────┐         Push Index         ┌──────────────────────┐
+│   Cosmos DB     │────────────────────────────>│  Azure Search Index  │
+│  (Source of     │                             │  (Optimized for      │
+│   Truth)        │<────────────────────────────│   Full-Text Search)  │
+└─────────────────┘      Read if needed         └──────────────────────┘
+       │                                                    │
+       │ CRUD Operations                                   │ Search Queries
+       ▼                                                    ▼
+  Your Application ────────────────────────────────> Search Results
+```
+
+**Best Practices:**
+- ✅ Cosmos DB: Source of truth, CRUD operations, point reads
+- ✅ Azure Search: Full-text search, filters, sorting, facets
+- ✅ Push to Search Index sau mỗi CREATE/UPDATE operation
+- ✅ Delete from Search Index khi DELETE from Cosmos DB
+- ✅ Periodic re-indexing để sync data
+
 ## ✅ **Completed Implementation**
 - ✅ Setup Giraffe web framework
 - ✅ Routing và middleware 

@@ -11,6 +11,8 @@ open Microsoft.Extensions.Logging
 open Giraffe
 open Microsoft.Azure.Cosmos
 open DotNetEnv
+open Serilog
+open Serilog.Events
 open Models
 open CustomersRepository
 open CustomersController
@@ -76,6 +78,7 @@ let webApp =
         
         // Utility endpoints
         GET >=> route "/api/sample-customer" >=> generateSampleCustomerHandler
+        POST >=> route "/api/customers/import-csv" >=> importCustomersFromCsvHandler
         
         // Azure Search endpoints
         GET >=> route "/api/search/init" >=> initializeSearchIndexHandler
@@ -116,17 +119,29 @@ let configureServices (services: IServiceCollection) =
         new SearchRepository(searchConfig)) |> ignore
 
 let configureLogging (builder: ILoggingBuilder) =
-    builder.AddConsole()
-           .AddDebug() |> ignore
+    builder.ClearProviders() |> ignore
+    builder.AddSerilog() |> ignore
 
 [<EntryPoint>]
 let main args =
+    // Configure Serilog
+    Log.Logger <- 
+        LoggerConfiguration()
+            .MinimumLevel.Debug()
+            .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+            .Enrich.FromLogContext()
+            .WriteTo.Console()
+            .WriteTo.File("logs/import-.txt", 
+                rollingInterval = RollingInterval.Day,
+                outputTemplate = "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
+            .CreateLogger()
+    
     // Load environment variables from .env file
     try
         Env.Load() |> ignore
-        printfn "✅ Loaded environment variables from .env file"
+        Log.Information("✅ Loaded environment variables from .env file")
     with
-    | _ -> printfn "⚠️  No .env file found, using system environment variables"
+    | _ -> Log.Warning("⚠️  No .env file found, using system environment variables")
     
     printfn "🚀 Starting Giraffe Web API with Azure Cosmos DB & Azure Search..."
     printfn "==============================================="
