@@ -1,9 +1,10 @@
-module Controllers
+module CustomersController
 
 open System
 open Giraffe
 open Models
-open CosmosRepository
+open CustomersRepository
+open SearchRepository
 
 // ============ Web API Controllers/Handlers ============
 
@@ -20,7 +21,7 @@ let healthHandler: HttpHandler =
 let getAllCustomersHandler: HttpHandler =
     fun next ctx ->
         task {
-            let repo = ctx.GetService<CosmosRepository>()
+            let repo = ctx.GetService<CustomersRepository>()
             let! result = repo.GetAllCustomersAsync()
 
             match result with
@@ -32,9 +33,9 @@ let getAllCustomersHandler: HttpHandler =
 let getCustomerHandler (customerId: string) : HttpHandler =
     fun next ctx ->
         task {
-            let repo = ctx.GetService<CosmosRepository>()
+            let repo = ctx.GetService<CustomersRepository>()
             let! result = repo.GetCustomerAsync customerId
-
+            
             match result with
             | Ok customer -> return! json customer next ctx
             | Error error -> return! (setStatusCode 404 >=> json {| error = error |}) next ctx
@@ -44,7 +45,7 @@ let getCustomerHandler (customerId: string) : HttpHandler =
 let createCustomerHandler: HttpHandler =
     fun next ctx ->
         task {
-            let repo = ctx.GetService<CosmosRepository>()
+            let repo = ctx.GetService<CustomersRepository>()
             let! customer = ctx.BindJsonAsync<Customer>()
 
             // Set required fields if not provided
@@ -68,7 +69,8 @@ let createCustomerHandler: HttpHandler =
 let updateCustomerHandler (customerId: string) : HttpHandler =
     fun next ctx ->
         task {
-            let repo = ctx.GetService<CosmosRepository>()
+            let repo = ctx.GetService<CustomersRepository>()
+            let searchRepo = ctx.GetService<SearchRepository>()
             let! customer = ctx.BindJsonAsync<Customer>()
 
             let customerToUpdate = { customer with id = customerId }
@@ -76,7 +78,9 @@ let updateCustomerHandler (customerId: string) : HttpHandler =
             let! result = repo.UpdateCustomerAsync customerToUpdate
 
             match result with
-            | Ok updatedCustomer -> return! json updatedCustomer next ctx
+            | Ok updatedCustomer -> 
+                searchRepo.IndexCustomerAsync updatedCustomer |> ignore
+                return! json updatedCustomer next ctx
             | Error error -> return! (setStatusCode 400 >=> json {| error = error |}) next ctx
         }
 
@@ -84,7 +88,7 @@ let updateCustomerHandler (customerId: string) : HttpHandler =
 let deleteCustomerHandler (customerId: string) : HttpHandler =
     fun next ctx ->
         task {
-            let repo = ctx.GetService<CosmosRepository>()
+            let repo = ctx.GetService<CustomersRepository>()
             let! result = repo.DeleteCustomerAsync customerId
 
             match result with
@@ -99,7 +103,8 @@ let generateSampleCustomerHandler: HttpHandler =
             let sampleCustomer: Customer = SampleData.generateSampleCustomer ()
             // createCustomerHandler
             // json sampleCustomer next ctx
-            let repo: CosmosRepository = ctx.GetService<CosmosRepository>()
+            let repo: CustomersRepository = ctx.GetService<CustomersRepository>()
+            let searchRepo: SearchRepository = ctx.GetService<SearchRepository>()
             let customer: Customer = sampleCustomer
 
             // Set required fields if not provided
@@ -115,13 +120,8 @@ let generateSampleCustomerHandler: HttpHandler =
             let! result = repo.CreateCustomerAsync customerWithDefault
 
             match result with
-            | Ok result ->
-                return!
-                    (setStatusCode 201
-                     >=> json
-                             {| result = result
-                                customerDefault = customerWithDefault |})
-                        next
-                        ctx
+            | Ok createdCustomer ->
+                searchRepo.IndexCustomerAsync createdCustomer |> ignore
+                return! (setStatusCode 201 >=> json {| result = createdCustomer |}) next ctx
             | Error error -> return! (setStatusCode 400 >=> json {| error = error |}) next ctx
         }

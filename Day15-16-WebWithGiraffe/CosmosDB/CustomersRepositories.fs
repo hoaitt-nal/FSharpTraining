@@ -1,4 +1,4 @@
-module CosmosRepository
+module CustomersRepository
 
 open System
 open System.IO
@@ -23,7 +23,7 @@ type SystemTextJsonCosmosSerializer(options: JsonSerializerOptions) =
             let text = sr.ReadToEnd()
             JsonSerializer.Deserialize<'T>(text, options)
     override _.ToStream<'T>(input: 'T) =
-        let stream = new System.IO.MemoryStream()
+        let stream: MemoryStream = new System.IO.MemoryStream()
         use utf8Writer = new System.Text.Json.Utf8JsonWriter(stream)
         JsonSerializer.Serialize(utf8Writer, input, options)
         utf8Writer.Flush()
@@ -38,7 +38,7 @@ type CosmosConfig =
       DatabaseId: string
       CustomerContainerId: string }
 
-type CosmosRepository(config: CosmosConfig) =
+type CustomersRepository(config: CosmosConfig) =
 
     // Configure System.Text.Json for Cosmos DB
     // let jsonOptions = 
@@ -140,34 +140,6 @@ type CosmosRepository(config: CosmosConfig) =
                 return Error $"Customer {customerId} not found"
             | ex -> return Error $"Error deleting customer: {ex.Message}"
         }
-
-    // ============ QUERY ============
-    // member this.GetCustomersByCountryAsync(country: string) =
-    //     task {
-    //         try
-    //             let query = $"SELECT * FROM c WHERE c.country = '{country}'"
-    //             let queryDefinition = QueryDefinition(query)
-    //             let requestOptions = QueryRequestOptions()
-    //             requestOptions.PartitionKey <- PartitionKey(PartitionKeys.customerPartition)
-
-    //             let queryIterator =
-    //                 customerContainer.GetItemQueryIterator<JObject>(queryDefinition, requestOptions = requestOptions)
-
-    //             let results = ResizeArray<Customer>()
-
-    //             while queryIterator.HasMoreResults do
-    //                 let! response = queryIterator.ReadNextAsync()
-
-    //                 // Convert each JObject to Customer, filtering out system properties
-    //                 for jObj in response do
-    //                     match CosmosHelpers.jObjectToCustomer jObj with
-    //                     | Some customer -> results.Add(customer)
-    //                     | None -> printfn "Warning: Skipping invalid customer object"
-
-    //             return Ok(List.ofSeq results)
-    //         with ex ->
-    //             return Error $"Error querying customers: {ex.Message}"
-    //     }
 
     interface IDisposable with
         member this.Dispose() = cosmosClient.Dispose()

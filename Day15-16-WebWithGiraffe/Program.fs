@@ -12,8 +12,10 @@ open Giraffe
 open Microsoft.Azure.Cosmos
 open DotNetEnv
 open Models
-open CosmosRepository
-open Controllers
+open CustomersRepository
+open CustomersController
+open SearchRepository
+open SearchController
 
 // ============ Giraffe Web API with Azure Cosmos DB ============
 let mutable jsonSerializerOption: JsonSerializerOptions = JsonSerializerOptions()
@@ -51,6 +53,13 @@ let createCosmosConfig (configuration: IConfiguration) = {
     DatabaseId = configuration.GetValue("COSMOS_DATABASE_ID", "COSMOS_DATABASE_ID")
     CustomerContainerId = configuration.GetValue("COSMOS_CUSTOMERS_CONTAINER_ID", "COSMOS_CUSTOMERS_CONTAINER_ID")
 }
+
+let createSearchConfig (configuration: IConfiguration) = {
+    ServiceEndpoint = configuration.GetValue("AZURE_SEARCH_ENDPOINT", "AZURE_SEARCH_ENDPOINT")
+    AdminApiKey = configuration.GetValue("AZURE_SEARCH_ADMIN_KEY", "AZURE_SEARCH_ADMIN_KEY")
+    IndexName = configuration.GetValue("AZURE_SEARCH_INDEX_NAME", "AZURE_SEARCH_INDEX_NAME")
+}
+
 // ============ API Routes ============
 
 let webApp =
@@ -67,6 +76,12 @@ let webApp =
         
         // Utility endpoints
         GET >=> route "/api/sample-customer" >=> generateSampleCustomerHandler
+        
+        // Azure Search endpoints
+        GET >=> route "/api/search/init" >=> initializeSearchIndexHandler
+        POST >=> route "/api/search/bulk-index" >=> bulkIndexCustomersHandler
+        POST >=> routef "/api/search/index/%s" indexCustomerHandler
+        POST >=> route "/api/search" >=> searchCustomersHandler
         
         // 404 for unmatched routes
         setStatusCode 404 >=> json {| error = "Not Found" |}
@@ -88,11 +103,17 @@ let configureServices (services: IServiceCollection) =
     
     services.AddSingleton<Json.ISerializer>(SystemTextJson.Serializer(jsonSerializerOption) :> Json.ISerializer) |> ignore
     
-    // Register CosmosRepository as singleton with configuration
-    services.AddSingleton<CosmosRepository>(fun serviceProvider ->
+    // Register CustomersRepository as singleton with configuration
+    services.AddSingleton<CustomersRepository>(fun serviceProvider ->
         let configuration = serviceProvider.GetService<IConfiguration>()
         let cosmosConfig = createCosmosConfig configuration
-        new CosmosRepository(cosmosConfig)) |> ignore
+        new CustomersRepository(cosmosConfig)) |> ignore
+    
+    // Register SearchRepository as singleton with configuration
+    services.AddSingleton<SearchRepository>(fun serviceProvider ->
+        let configuration = serviceProvider.GetService<IConfiguration>()
+        let searchConfig = createSearchConfig configuration
+        new SearchRepository(searchConfig)) |> ignore
 
 let configureLogging (builder: ILoggingBuilder) =
     builder.AddConsole()
@@ -107,7 +128,7 @@ let main args =
     with
     | _ -> printfn "⚠️  No .env file found, using system environment variables"
     
-    printfn "🚀 Starting Giraffe Web API with Azure Cosmos DB..."
+    printfn "🚀 Starting Giraffe Web API with Azure Cosmos DB & Azure Search..."
     printfn "==============================================="
     printfn "📋 Available endpoints:"
     printfn "   GET  /health                    - Health check"
@@ -117,12 +138,21 @@ let main args =
     printfn "   PUT  /api/customers/{id}        - Update customer"
     printfn "   DELETE /api/customers/{id}      - Delete customer"
     printfn "   GET  /api/sample-customer       - Generate sample customer data"
+    printfn ""
+    printfn "🔍 Azure Search endpoints:"
+    printfn "   GET  /api/search/init           - Initialize search index"
+    printfn "   POST /api/search/bulk-index     - Bulk index all customers"
+    printfn "   POST /api/search/index/{id}     - Index single customer"
+    printfn "   GET  /api/search?q=...          - Search customers"
     printfn "==============================================="
     printfn "🌍 Environment Variables (with fallbacks):"
     printfn "   COSMOS_ENDPOINT_URL             - Cosmos DB endpoint"
     printfn "   COSMOS_PRIMARY_KEY              - Cosmos DB primary key"
     printfn "   COSMOS_DATABASE_ID              - Database name"
     printfn "   COSMOS_CUSTOMERS_CONTAINER_ID   - Customers container name"
+    printfn "   AZURE_SEARCH_ENDPOINT           - Azure Search endpoint"
+    printfn "   AZURE_SEARCH_ADMIN_KEY          - Azure Search admin key"
+    printfn "   AZURE_SEARCH_INDEX_NAME         - Search index name"
     printfn "   ASPNETCORE_URLS                 - Web server URLs"
     printfn "==============================================="
     

@@ -11,12 +11,15 @@
     <PackageReference Include="FSharp.SystemTextJson" Version="1.4.36" />
     <PackageReference Include="Giraffe" Version="6.4.0" />
     <PackageReference Include="DotNetEnv" Version="3.0.0" />
+    <PackageReference Include="Azure.Search.Documents" Version="11.6.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Models.fs" />
-    <Compile Include="CosmosRepository.fs" />
-    <Compile Include="Controllers.fs" />
+    <Compile Include="Models/Customers.fs" />
+    <Compile Include="CosmosDB/CustomersRepositories.fs" />
+    <Compile Include="SearchIndex/SearchRepositories.fs" />
+    <Compile Include="Controllers/CustomersController.fs" />
+    <Compile Include="Controllers/SearchController.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
