@@ -14,6 +14,7 @@ open DotNetEnv
 open Serilog
 open Serilog.Events
 open Models
+open CustomersSearchIndex
 open CustomersRepository
 open CustomersController
 open SearchRepository

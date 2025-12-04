@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="FSharp.Control.AsyncSeq" Version="3.2.1" />
+    <PackageReference Include="Microsoft.Azure.Core.Spatial" Version="1.1.0" />
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.39.0" />
     <PackageReference Include="FSharp.SystemTextJson" Version="1.4.36" />
     <PackageReference Include="Giraffe" Version="6.4.0" />
@@ -19,6 +20,7 @@
 
   <ItemGroup>
     <Compile Include="Models/Customers.fs" />
+    <Compile Include="Models/CustomersSearchIndex.fs" />
     <Compile Include="CosmosDB/CustomersRepositories.fs" />
     <Compile Include="SearchIndex/SearchRepositories.fs" />
     <Compile Include="Controllers/CustomersController.fs" />

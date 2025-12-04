@@ -5,6 +5,7 @@ open Giraffe
 open Microsoft.Extensions.DependencyInjection
 open SearchRepository
 open CustomersRepository
+open CustomersSearchIndex
 
 // ============ Search API Handlers ============
 

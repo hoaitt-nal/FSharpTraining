@@ -1,0 +1,365 @@
+{
+  "info": {
+    "name": "Giraffe Web API - Azure Cosmos DB & Search",
+    "description": "F# Giraffe Web API with Azure Cosmos DB and Azure Cognitive Search",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "{{base_url}}",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health & Info",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "health"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Customers - CRUD",
+      "item": [
+        {
+          "name": "Get All Customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "customers"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Customer by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/customers/customer-123",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "customers",
+                "customer-123"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Customer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"dateOfBirth\": \"1990-01-15\",\n  \"country\": \"USA\",\n  \"city\": \"New York\",\n  \"loyaltyTier\": \"Gold\",\n  \"totalOrders\": 5,\n  \"totalSpent\": 1500.50\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "customers"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Customer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john.updated@example.com\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe Updated\",\n  \"dateOfBirth\": \"1990-01-15\",\n  \"country\": \"USA\",\n  \"city\": \"Los Angeles\",\n  \"loyaltyTier\": \"Platinum\",\n  \"totalOrders\": 10,\n  \"totalSpent\": 3000.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/customers/customer-123",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "customers",
+                "customer-123"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Customer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/customers/customer-123",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "customers",
+                "customer-123"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Generate Sample Customer",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/sample-customer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "sample-customer"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "CSV Import",
+      "item": [
+        {
+          "name": "Import Customers from CSV (Multipart)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "sample-customers.csv"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/customers/import-csv",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "customers",
+                "import-csv"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Import Customers from CSV (Raw)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/csv"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "email,firstName,lastName,dateOfBirth,country,city,loyaltyTier,totalOrders,totalSpent\njane.smith@example.com,Jane,Smith,1992-05-20,UK,London,Silver,3,800.00\nbob.wilson@example.com,Bob,Wilson,1988-12-10,Canada,Toronto,Bronze,1,150.00"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/customers/import-csv",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "customers",
+                "import-csv"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Azure Search",
+      "item": [
+        {
+          "name": "Initialize Search Index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/search/init",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "search",
+                "init"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Bulk Index All Customers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/search/bulk-index",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "search",
+                "bulk-index"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Index Single Customer",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/search/index/customer-123",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "search",
+                "index",
+                "customer-123"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search Customers - Simple",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"searchText\": \"John\",\n  \"filters\": null,\n  \"sort\": \"email asc\",\n  \"top\": 10,\n  \"skip\": 0\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/search",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "search"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search Customers - Advanced Filters",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"searchText\": \"\",\n  \"filters\": {\n    \"country\": \"USA\",\n    \"loyaltyTier\": \"Gold\",\n    \"totalOrdersFrom\": 5,\n    \"totalSpentFrom\": 1000.0\n  },\n  \"sort\": \"totalSpent desc\",\n  \"top\": 10,\n  \"skip\": 0\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/search",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "search"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

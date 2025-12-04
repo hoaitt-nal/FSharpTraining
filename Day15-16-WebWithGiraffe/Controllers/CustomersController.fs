@@ -170,6 +170,7 @@ let parseCsvLineToCustomer (line: string) : Result<Customer, string> =
                   loyaltyTier = loyaltyTier
                   lastLoginDate = None
                   lastPurchaseDate = None
+                  coordinates = None
                   partitionKey = PartitionKeys.customerPartition }
         with ex ->
             Error(sprintf "Error parsing line: %s, Exception: %s" line ex.Message)

@@ -21,7 +21,10 @@ type SystemTextJsonCosmosSerializer(options: JsonSerializerOptions) =
         else
             use sr = new System.IO.StreamReader(stream)
             let text = sr.ReadToEnd()
-            JsonSerializer.Deserialize<'T>(text, options)
+            if String.IsNullOrWhiteSpace(text) then
+                Unchecked.defaultof<'T>
+            else
+                JsonSerializer.Deserialize<'T>(text, options)
     override _.ToStream<'T>(input: 'T) =
         let stream: MemoryStream = new System.IO.MemoryStream()
         use utf8Writer = new System.Text.Json.Utf8JsonWriter(stream)
@@ -31,6 +34,25 @@ type SystemTextJsonCosmosSerializer(options: JsonSerializerOptions) =
         stream :> System.IO.Stream
 
 // ============ Simple Azure Cosmos DB Repository ============
+
+// Custom DateTime converter to handle various formats
+type FlexibleDateTimeConverter() =
+    inherit JsonConverter<DateTime>()
+    
+    override _.Read(reader: byref<Utf8JsonReader>, typeToConvert: Type, options: JsonSerializerOptions) =
+        match reader.TokenType with
+        | JsonTokenType.String ->
+            let dateStr = reader.GetString()
+            match DateTime.TryParse(dateStr) with
+            | true, dt -> dt
+            | false, _ -> DateTime.MinValue
+        | JsonTokenType.Number ->
+            let timestamp = reader.GetInt64()
+            DateTimeOffset.FromUnixTimeSeconds(timestamp).DateTime
+        | _ -> DateTime.MinValue
+    
+    override _.Write(writer: Utf8JsonWriter, value: DateTime, options: JsonSerializerOptions) =
+        writer.WriteStringValue(value.ToString("O"))
 
 type CosmosConfig =
     { EndpointUrl: string
@@ -49,7 +71,9 @@ type CustomersRepository(config: CosmosConfig) =
     let jsonOptions =
         let opts = JsonSerializerOptions()
         opts.PropertyNamingPolicy <- JsonNamingPolicy.CamelCase
-        opts.Converters.Add(JsonFSharpConverter())   // hỗ trợ record/DU
+        opts.Converters.Add(FlexibleDateTimeConverter())  // Handle various DateTime formats
+        let fsharpOptions = JsonFSharpOptions.Default().WithSkippableOptionFields()
+        opts.Converters.Add(JsonFSharpConverter(fsharpOptions))   // hỗ trợ record/DU với option fields
         opts
 
     let clientOptions =
@@ -107,7 +131,6 @@ type CustomersRepository(config: CosmosConfig) =
                 let results = ResizeArray<Customer>()
                 
                 while queryIterator.HasMoreResults do
-                    printfn "HasMoreResults: %A" queryIterator.HasMoreResults
                     let! response = queryIterator.ReadNextAsync()
                     printfn "Retrieved %d items from Cosmos DB" response.Count
                     results.AddRange(response.Resource)
