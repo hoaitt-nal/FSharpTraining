@@ -130,21 +130,18 @@ let generateSampleCustomerHandler: HttpHandler =
 // ============ CSV Import Handler ============
 // Helper: Validate customer data
 let validateCustomer (customer: Customer) : Result<Customer, string> =
-    // TODO: Add validation rules
-    // - Check required fields
-
-    // - Validate email format
-    // - Validate date ranges
-    // - Check loyalty tier values
-
-    Ok customer
+    let requiredFields =
+        [ customer.email; customer.firstName; customer.lastName; customer.country; customer.city ] 
+        |> List.forall (fun field -> not (String.IsNullOrWhiteSpace(field)))
+    if not requiredFields then
+        Error "Missing required fields"
+    else if customer.email.Contains("@") |> not then
+        Error "Invalid email format"
+    else 
+        Ok customer
 // Helper: Parse CSV line to Customer
 let parseCsvLineToCustomer (line: string) : Result<Customer, string> =
-    // TODO: Implement CSV parsing logic
-    // Expected format: email,firstName,lastName,dateOfBirth,country,city,loyaltyTier
-    // Example: john@example.com,John,Doe,1990-01-01,USA,New York,Gold
     let parts = line.Split(',')
-
     let parseData =
         try
             let email = parts.[0]

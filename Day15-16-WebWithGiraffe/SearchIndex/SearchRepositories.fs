@@ -33,13 +33,14 @@ type SearchRequest = {
     filters: Filters option
     sort: string option
     top: int option
+    skip: int option
 }
 
 // ============ Search Document Model ============
 // Mapping từ Customer sang Search Document
 [<CLIMutable>]
 type CustomerSearchDocument =
-    { [<SimpleField(IsKey = true, IsFilterable = true)>]
+    { [<SimpleField(IsKey = true)>]
       id: string
 
       [<SearchableField(IsFilterable = true, IsSortable = true)>]
@@ -48,28 +49,28 @@ type CustomerSearchDocument =
       [<SearchableField(IsFilterable = true, IsSortable = true)>]
       email: string
 
-      [<SearchableField(IsSortable = true)>]
+      [<SearchableField(IsFilterable = true, IsSortable = true)>]
       firstName: string
 
-      [<SearchableField(IsSortable = true)>]
+      [<SearchableField(IsFilterable = true, IsSortable = true)>]
       lastName: string
 
-      [<SearchableField(IsSortable = true)>]
+      [<SearchableField(IsFilterable = true, IsSortable = true)>]
       fullName: string
 
       [<SimpleField(IsFilterable = true, IsSortable = true)>]
       dateOfBirth: DateTime
 
-      [<SearchableField(IsFilterable = true, IsFacetable = true)>]
+      [<SearchableField(IsFilterable = true, IsSortable = true, IsFacetable = true)>]
       country: string
 
-      [<SearchableField(IsFilterable = true)>]
+      [<SearchableField(IsFilterable = true, IsSortable = true)>]
       city: string
 
       [<SimpleField(IsFilterable = true, IsSortable = true)>]
       registrationDate: DateTime
 
-      [<SimpleField(IsFilterable = true)>]
+      [<SimpleField(IsFilterable = true, IsSortable = true)>]
       isActive: bool
 
       [<SimpleField(IsFilterable = true, IsSortable = true)>]
@@ -78,7 +79,7 @@ type CustomerSearchDocument =
       [<SimpleField(IsFilterable = true, IsSortable = true)>]
       totalSpent: double
 
-      [<SearchableField(IsFilterable = true, IsFacetable = true)>]
+      [<SearchableField(IsFilterable = true, IsSortable = true, IsFacetable = true)>]
       loyaltyTier: string }
 
 // ============ Helper Functions ============
@@ -102,14 +103,14 @@ module SearchHelpers =
           loyaltyTier = customer.loyaltyTier }
           // Convert query string parameters to Filters record
     let parseFiltersToQueryString (filters: Filters option) : string = 
-        let filterList = System.Collections.Generic.List<string>()
+        let filterList: Collections.Generic.List<string> = System.Collections.Generic.List<string>()
         
         match filters with
         | Some f ->
             f.email 
                 |> Option.iter (fun e -> filterList.Add($"email eq '{e}'"))
             f.fullName
-                |> Option.iter (fun fn -> filterList.Add($"fullName eq '{fn}'"))
+                |> Option.iter (fun fn -> filterList.Add($"search.ismatch('{fn}', 'fullName')"))
             // f.dateOfBirth
             //     |> Option.iter (fun dob -> filterList.Add($"dateOfBirth eq {dob:yyyy-MM-dd}"))
             f.country
@@ -208,7 +209,7 @@ type SearchRepository(config: SearchConfig) =
     // ============ SEARCH OPERATIONS ============
     // Advanced search với multiple filters và sorting
     member this.AdvancedSearchAsync
-        (searchText: string, filters: Filters option, sort: string option, top : int option)
+        (searchText: string, filters: Filters option, sort: string option, top : int option, skip: int option)
         =
         task {
             try
@@ -220,8 +221,10 @@ type SearchRepository(config: SearchConfig) =
                     options.Filter <- filterString
 
                 // Sorting
-                options.OrderBy.Add("fullName desc")
-                options.Size <- defaultArg top  20
+                options.OrderBy.Add(sort |> Option.defaultValue "customerId asc")
+                options.Size <- defaultArg top  1
+                options.Skip <- defaultArg skip 0
+                options.IncludeTotalCount <- true
 
                 let! response = searchClient.SearchAsync<CustomerSearchDocument>(searchText, options)
 

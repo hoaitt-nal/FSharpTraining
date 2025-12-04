@@ -1,0 +1,4 @@
+email,firstName,lastName,dateOfBirth,country,city,loyaltyTier,totalOrders,totalSpent
+abigail.davis1example.com,Abigail,Davis,1978-06-14,AUSTRALIA,Vancouver,Gold,45,7849.00
+ava.martinez2@example.com,Ava,Martinez,1988-04-03,USA,Toronto,Platinum,96,6276.00
+,Joseph,Taylor,1968-11-19,FRANCE,Los Angeles,Platinum,77,16642.00

@@ -73,10 +73,11 @@ let searchCustomersHandler: HttpHandler =
             let filters = req.filters
             let sort = req.sort
             let top = req.top
+            let skip = req.skip
 
             // Parse filter parameters from query string using helper function
 
-            let! result = searchRepo.AdvancedSearchAsync(searchText, filters, sort, top)
+            let! result = searchRepo.AdvancedSearchAsync(searchText, filters, sort, top, skip)
 
             match result with
             | Ok documents ->

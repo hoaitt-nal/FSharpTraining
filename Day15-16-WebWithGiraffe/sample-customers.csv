@@ -1,0 +1,501 @@
+email,firstName,lastName,dateOfBirth,country,city,loyaltyTier,totalOrders,totalSpent
+abigail.davis1@example.com,Abigail,Davis,1978-06-14,AUSTRALIA,Vancouver,Gold,45,7849.00
+ava.martinez2@example.com,Ava,Martinez,1988-04-03,USA,Toronto,Platinum,96,6276.00
+joseph.taylor3@example.com,Joseph,Taylor,1968-11-19,FRANCE,Los Angeles,Platinum,77,16642.00
+donald.miller4@example.com,Donald,Miller,1975-07-27,GERMANY,Phoenix,Silver,18,3563.00
+emma.lee5@example.com,Emma,Lee,1960-05-10,USA,Los Angeles,Platinum,87,456.00
+william.wilson6@example.com,William,Wilson,2004-01-08,ITALY,Paris,Bronze,90,6720.00
+ava.harris7@example.com,Ava,Harris,1968-01-11,SPAIN,Dallas,Bronze,10,179.00
+david.martinez8@example.com,David,Martinez,1999-06-06,CANADA,Tokyo,Silver,11,8466.00
+charles.moore9@example.com,Charles,Moore,1981-09-10,NETHERLANDS,San Jose,Platinum,52,18211.00
+thomas.harris10@example.com,Thomas,Harris,1978-05-23,SPAIN,San Diego,Platinum,91,17530.00
+abigail.jones11@example.com,Abigail,Jones,1961-01-23,ITALY,Lyon,Bronze,87,9930.00
+emily.clark12@example.com,Emily,Clark,1976-07-27,NETHERLANDS,Dallas,Silver,43,6001.00
+daniel.white13@example.com,Daniel,White,1962-09-27,GERMANY,Dallas,Silver,77,16463.00
+sarah.perez14@example.com,Sarah,Perez,1978-09-19,CANADA,New York,Gold,22,9338.00
+joseph.garcia15@example.com,Joseph,Garcia,1962-10-24,GERMANY,Houston,Gold,5,13577.00
+ava.rodriguez16@example.com,Ava,Rodriguez,1966-08-01,GERMANY,Birmingham,Gold,1,17787.00
+jane.brown17@example.com,Jane,Brown,1963-05-17,USA,Los Angeles,Bronze,88,6203.00
+amelia.smith18@example.com,Amelia,Smith,1985-01-07,JAPAN,Munich,Bronze,70,4906.00
+sophia.jones19@example.com,Sophia,Jones,1980-11-06,SPAIN,Dallas,Silver,70,17105.00
+jane.harris20@example.com,Jane,Harris,1994-03-13,CANADA,Vancouver,Platinum,33,8757.00
+sarah.taylor21@example.com,Sarah,Taylor,1974-11-18,AUSTRALIA,Toronto,Bronze,98,8789.00
+sophia.martinez22@example.com,Sophia,Martinez,1962-06-27,USA,Munich,Platinum,10,5079.00
+emily.anderson23@example.com,Emily,Anderson,1983-12-03,CANADA,Toronto,Platinum,52,10778.00
+anthony.garcia24@example.com,Anthony,Garcia,1966-08-07,SPAIN,Munich,Platinum,28,4476.00
+richard.smith25@example.com,Richard,Smith,1963-03-25,FRANCE,Chicago,Silver,25,10321.00
+evelyn.sanchez26@example.com,Evelyn,Sanchez,1996-07-09,USA,Houston,Bronze,94,8892.00
+jane.perez27@example.com,Jane,Perez,1961-06-08,JAPAN,Dallas,Platinum,44,8055.00
+emma.smith28@example.com,Emma,Smith,1979-08-06,SPAIN,Dallas,Bronze,86,13321.00
+joseph.thomas29@example.com,Joseph,Thomas,1970-11-11,JAPAN,Dallas,Gold,80,7139.00
+mia.taylor30@example.com,Mia,Taylor,1972-09-22,AUSTRALIA,Manchester,Silver,79,7508.00
+thomas.sanchez31@example.com,Thomas,Sanchez,1977-10-10,UK,London,Platinum,52,11251.00
+daniel.jones32@example.com,Daniel,Jones,1989-02-03,GERMANY,Sydney,Platinum,74,6271.00
+mia.smith33@example.com,Mia,Smith,1995-07-17,UK,Paris,Bronze,76,17080.00
+jane.clark34@example.com,Jane,Clark,1976-08-09,NETHERLANDS,San Jose,Gold,37,9077.00
+charlotte.moore35@example.com,Charlotte,Moore,1973-01-21,NETHERLANDS,Manchester,Gold,42,6148.00
+john.hernandez36@example.com,John,Hernandez,1985-02-25,USA,Melbourne,Platinum,93,7265.00
+john.gonzalez37@example.com,John,Gonzalez,1980-06-01,JAPAN,Manchester,Bronze,84,9246.00
+emma.hernandez38@example.com,Emma,Hernandez,1971-11-26,GERMANY,Dallas,Gold,14,11492.00
+donald.jackson39@example.com,Donald,Jackson,1974-04-13,SPAIN,Phoenix,Platinum,96,10592.00
+john.moore40@example.com,John,Moore,1976-06-17,CANADA,London,Platinum,91,16634.00
+richard.lopez41@example.com,Richard,Lopez,1962-02-15,FRANCE,Toronto,Platinum,81,15174.00
+anthony.thompson42@example.com,Anthony,Thompson,1967-06-02,CANADA,San Antonio,Silver,100,3836.00
+william.taylor43@example.com,William,Taylor,1961-05-17,ITALY,Manchester,Bronze,96,16355.00
+amelia.white44@example.com,Amelia,White,1983-05-05,SPAIN,Tokyo,Bronze,69,1216.00
+charlotte.thomas45@example.com,Charlotte,Thomas,1976-11-22,SPAIN,Houston,Platinum,78,2283.00
+robert.garcia46@example.com,Robert,Garcia,1984-01-01,USA,Birmingham,Gold,72,12307.00
+evelyn.sanchez47@example.com,Evelyn,Sanchez,1999-08-20,AUSTRALIA,Tokyo,Bronze,20,8960.00
+matthew.hernandez48@example.com,Matthew,Hernandez,2002-07-22,CANADA,Tokyo,Bronze,22,2026.00
+jane.garcia49@example.com,Jane,Garcia,1977-04-16,AUSTRALIA,New York,Platinum,49,7051.00
+harper.taylor50@example.com,Harper,Taylor,1992-11-11,CANADA,Tokyo,Gold,25,9555.00
+matthew.smith51@example.com,Matthew,Smith,1998-03-12,ITALY,Vancouver,Platinum,69,5489.00
+emily.hernandez52@example.com,Emily,Hernandez,1998-08-19,NETHERLANDS,Tokyo,Gold,82,8137.00
+john.smith53@example.com,John,Smith,1984-01-14,CANADA,Sydney,Platinum,50,12406.00
+abigail.lopez54@example.com,Abigail,Lopez,1963-11-13,GERMANY,Paris,Gold,63,14130.00
+joseph.hernandez55@example.com,Joseph,Hernandez,1978-11-09,USA,London,Platinum,11,10200.00
+elizabeth.davis56@example.com,Elizabeth,Davis,1972-04-08,USA,Vancouver,Platinum,71,7319.00
+joseph.moore57@example.com,Joseph,Moore,2000-08-23,FRANCE,Berlin,Bronze,72,7574.00
+olivia.wilson58@example.com,Olivia,Wilson,1980-05-24,CANADA,London,Bronze,48,878.00
+emily.harris59@example.com,Emily,Harris,2003-02-16,JAPAN,Munich,Platinum,93,10660.00
+mark.johnson60@example.com,Mark,Johnson,1992-08-07,UK,Manchester,Gold,88,18575.00
+charles.martinez61@example.com,Charles,Martinez,1998-07-12,NETHERLANDS,Manchester,Platinum,23,11853.00
+amelia.martinez62@example.com,Amelia,Martinez,1967-07-19,USA,Munich,Platinum,14,17887.00
+joseph.clark63@example.com,Joseph,Clark,1971-11-26,CANADA,Phoenix,Platinum,87,14253.00
+sarah.garcia64@example.com,Sarah,Garcia,1964-06-01,FRANCE,Phoenix,Silver,2,16796.00
+elizabeth.harris65@example.com,Elizabeth,Harris,2001-04-08,SPAIN,Vancouver,Bronze,80,1644.00
+sophia.gonzalez66@example.com,Sophia,Gonzalez,1966-05-09,JAPAN,Tokyo,Bronze,26,16998.00
+robert.ramirez67@example.com,Robert,Ramirez,1975-02-07,SPAIN,Toronto,Silver,17,5905.00
+william.ramirez68@example.com,William,Ramirez,1989-05-20,JAPAN,Dallas,Silver,41,8142.00
+richard.white69@example.com,Richard,White,1993-11-20,NETHERLANDS,Phoenix,Silver,96,19614.00
+charles.perez70@example.com,Charles,Perez,1963-12-15,FRANCE,Berlin,Silver,20,8716.00
+evelyn.miller71@example.com,Evelyn,Miller,1962-10-15,ITALY,Paris,Silver,99,15768.00
+ava.garcia72@example.com,Ava,Garcia,1980-11-06,CANADA,Lyon,Bronze,71,13593.00
+thomas.davis73@example.com,Thomas,Davis,1982-08-03,UK,Tokyo,Platinum,50,13693.00
+donald.anderson74@example.com,Donald,Anderson,1996-10-08,CANADA,Paris,Platinum,15,1124.00
+sarah.williams75@example.com,Sarah,Williams,2000-04-03,UK,Lyon,Silver,81,6856.00
+donald.smith76@example.com,Donald,Smith,1973-03-24,NETHERLANDS,Dallas,Silver,14,13311.00
+jane.hernandez77@example.com,Jane,Hernandez,1986-06-07,CANADA,Los Angeles,Bronze,48,3430.00
+mia.taylor78@example.com,Mia,Taylor,1992-09-28,AUSTRALIA,Lyon,Gold,11,7574.00
+elizabeth.lewis79@example.com,Elizabeth,Lewis,1984-07-10,ITALY,Houston,Platinum,66,17226.00
+john.hernandez80@example.com,John,Hernandez,1990-06-13,JAPAN,Paris,Bronze,96,7633.00
+robert.brown81@example.com,Robert,Brown,1972-02-21,NETHERLANDS,Chicago,Silver,84,14383.00
+amelia.taylor82@example.com,Amelia,Taylor,1984-06-06,UK,Houston,Silver,23,1953.00
+isabella.perez83@example.com,Isabella,Perez,1995-12-19,AUSTRALIA,Chicago,Gold,19,4082.00
+sophia.harris84@example.com,Sophia,Harris,1987-09-24,ITALY,Chicago,Platinum,21,3218.00
+isabella.lopez85@example.com,Isabella,Lopez,2003-05-02,JAPAN,Berlin,Gold,18,18107.00
+william.gonzalez86@example.com,William,Gonzalez,1977-04-20,AUSTRALIA,Vancouver,Gold,10,16265.00
+daniel.lopez87@example.com,Daniel,Lopez,1982-12-10,JAPAN,Sydney,Platinum,37,113.00
+john.williams88@example.com,John,Williams,1997-04-25,USA,San Diego,Platinum,97,8602.00
+ava.davis89@example.com,Ava,Davis,1985-09-09,CANADA,San Antonio,Bronze,62,2057.00
+donald.thompson90@example.com,Donald,Thompson,1963-04-16,SPAIN,Phoenix,Platinum,69,411.00
+elizabeth.sanchez91@example.com,Elizabeth,Sanchez,1969-02-07,UK,Manchester,Silver,89,18499.00
+david.hernandez92@example.com,David,Hernandez,1964-08-22,FRANCE,Toronto,Bronze,48,8212.00
+charlotte.martinez93@example.com,Charlotte,Martinez,1973-11-18,GERMANY,Paris,Bronze,26,12079.00
+emily.harris94@example.com,Emily,Harris,1966-02-04,UK,Birmingham,Bronze,81,3483.00
+sarah.clark95@example.com,Sarah,Clark,1969-04-09,NETHERLANDS,San Jose,Platinum,45,18838.00
+michael.white96@example.com,Michael,White,1969-08-07,CANADA,Manchester,Platinum,33,19994.00
+daniel.lee97@example.com,Daniel,Lee,1983-03-09,UK,Manchester,Gold,5,4995.00
+michael.moore98@example.com,Michael,Moore,1966-02-17,USA,Paris,Gold,10,1773.00
+harper.thompson99@example.com,Harper,Thompson,1968-02-21,CANADA,Berlin,Platinum,58,14071.00
+john.martinez100@example.com,John,Martinez,1964-02-22,JAPAN,San Jose,Platinum,71,3095.00
+sarah.white101@example.com,Sarah,White,1975-05-16,CANADA,Toronto,Gold,61,14350.00
+william.jones102@example.com,William,Jones,1980-02-07,FRANCE,San Diego,Gold,61,919.00
+mia.martin103@example.com,Mia,Martin,1992-08-19,CANADA,Philadelphia,Silver,62,17973.00
+mia.wilson104@example.com,Mia,Wilson,1982-11-09,SPAIN,Birmingham,Platinum,10,10471.00
+john.wilson105@example.com,John,Wilson,1976-04-04,CANADA,Los Angeles,Gold,5,16398.00
+olivia.moore106@example.com,Olivia,Moore,1987-07-13,NETHERLANDS,San Antonio,Platinum,37,17275.00
+charlotte.brown107@example.com,Charlotte,Brown,1973-11-09,JAPAN,Sydney,Gold,41,5709.00
+john.moore108@example.com,John,Moore,1975-09-20,CANADA,Melbourne,Silver,7,14630.00
+emma.ramirez109@example.com,Emma,Ramirez,1985-02-26,USA,Chicago,Bronze,24,14849.00
+anthony.thomas110@example.com,Anthony,Thomas,1988-09-12,JAPAN,Vancouver,Bronze,46,18060.00
+anthony.hernandez111@example.com,Anthony,Hernandez,2004-12-25,AUSTRALIA,Vancouver,Bronze,19,2762.00
+olivia.martinez112@example.com,Olivia,Martinez,1992-09-20,SPAIN,San Jose,Silver,39,7699.00
+olivia.taylor113@example.com,Olivia,Taylor,1978-02-23,SPAIN,Birmingham,Silver,57,18451.00
+thomas.garcia114@example.com,Thomas,Garcia,1984-07-21,FRANCE,Tokyo,Platinum,19,12700.00
+david.johnson115@example.com,David,Johnson,1982-04-22,CANADA,Philadelphia,Bronze,68,11525.00
+james.davis116@example.com,James,Davis,1991-06-04,ITALY,Houston,Platinum,82,13980.00
+isabella.white117@example.com,Isabella,White,1992-10-06,JAPAN,Toronto,Bronze,86,15087.00
+elizabeth.thompson118@example.com,Elizabeth,Thompson,1966-03-11,SPAIN,San Jose,Gold,3,9620.00
+abigail.miller119@example.com,Abigail,Miller,1961-07-16,GERMANY,Philadelphia,Silver,56,10534.00
+thomas.moore120@example.com,Thomas,Moore,1992-01-20,JAPAN,San Antonio,Bronze,88,15550.00
+evelyn.williams121@example.com,Evelyn,Williams,2003-05-10,NETHERLANDS,Paris,Platinum,64,8906.00
+william.martin122@example.com,William,Martin,1975-10-10,JAPAN,Paris,Gold,51,1808.00
+isabella.brown123@example.com,Isabella,Brown,1995-01-28,UK,Philadelphia,Gold,98,6525.00
+emma.garcia124@example.com,Emma,Garcia,1976-10-07,USA,Dallas,Gold,70,9191.00
+emma.garcia125@example.com,Emma,Garcia,1997-08-16,FRANCE,Birmingham,Platinum,9,14195.00
+amelia.thomas126@example.com,Amelia,Thomas,1964-08-18,USA,Vancouver,Gold,93,5065.00
+robert.taylor127@example.com,Robert,Taylor,2001-09-03,CANADA,Toronto,Silver,55,13639.00
+matthew.martin128@example.com,Matthew,Martin,2003-02-06,UK,Munich,Silver,6,15027.00
+joseph.garcia129@example.com,Joseph,Garcia,1982-02-23,USA,Birmingham,Silver,2,11063.00
+charles.williams130@example.com,Charles,Williams,1983-05-07,NETHERLANDS,Manchester,Platinum,50,10968.00
+sarah.brown131@example.com,Sarah,Brown,1997-12-14,ITALY,Munich,Bronze,93,11495.00
+robert.white132@example.com,Robert,White,1965-11-22,JAPAN,Lyon,Silver,70,7098.00
+daniel.white133@example.com,Daniel,White,1974-01-11,ITALY,Manchester,Silver,36,4482.00
+matthew.johnson134@example.com,Matthew,Johnson,2004-04-20,ITALY,Lyon,Silver,59,14266.00
+donald.taylor135@example.com,Donald,Taylor,1997-07-27,ITALY,Paris,Silver,42,15914.00
+mark.brown136@example.com,Mark,Brown,1992-03-23,GERMANY,Berlin,Silver,92,7041.00
+elizabeth.smith137@example.com,Elizabeth,Smith,2002-02-24,ITALY,Birmingham,Gold,12,4341.00
+evelyn.anderson138@example.com,Evelyn,Anderson,1999-11-15,GERMANY,Birmingham,Platinum,52,12911.00
+ava.thomas139@example.com,Ava,Thomas,1963-03-26,CANADA,Sydney,Gold,20,5808.00
+mark.williams140@example.com,Mark,Williams,1966-01-06,AUSTRALIA,Lyon,Bronze,67,6977.00
+david.gonzalez141@example.com,David,Gonzalez,1995-06-05,NETHERLANDS,Lyon,Platinum,70,7352.00
+david.moore142@example.com,David,Moore,1967-11-13,JAPAN,Manchester,Bronze,60,987.00
+john.wilson143@example.com,John,Wilson,1981-01-07,USA,New York,Bronze,84,17377.00
+mark.jones144@example.com,Mark,Jones,1987-05-02,AUSTRALIA,Los Angeles,Bronze,5,14303.00
+sophia.lopez145@example.com,Sophia,Lopez,1997-06-21,CANADA,Lyon,Bronze,15,14086.00
+anthony.white146@example.com,Anthony,White,2001-02-07,FRANCE,Melbourne,Bronze,52,6509.00
+matthew.white147@example.com,Matthew,White,1977-07-22,NETHERLANDS,Los Angeles,Platinum,42,12808.00
+harper.johnson148@example.com,Harper,Johnson,1991-03-23,ITALY,Munich,Platinum,62,13539.00
+mark.jones149@example.com,Mark,Jones,1980-07-15,GERMANY,Chicago,Silver,68,6929.00
+john.robinson150@example.com,John,Robinson,1972-06-03,FRANCE,San Diego,Silver,35,16106.00
+mark.harris151@example.com,Mark,Harris,1970-04-22,FRANCE,Houston,Silver,92,16894.00
+joseph.jackson152@example.com,Joseph,Jackson,2000-09-07,AUSTRALIA,Phoenix,Silver,85,15458.00
+mark.martinez153@example.com,Mark,Martinez,1991-02-10,FRANCE,Manchester,Platinum,85,9983.00
+harper.lee154@example.com,Harper,Lee,2001-05-01,CANADA,Dallas,Silver,40,582.00
+richard.rodriguez155@example.com,Richard,Rodriguez,1987-10-21,NETHERLANDS,Vancouver,Gold,18,13043.00
+david.sanchez156@example.com,David,Sanchez,2001-01-26,NETHERLANDS,Phoenix,Gold,69,16394.00
+olivia.ramirez157@example.com,Olivia,Ramirez,1967-10-16,ITALY,Houston,Silver,2,18459.00
+joseph.taylor158@example.com,Joseph,Taylor,2001-09-25,CANADA,London,Silver,8,1507.00
+matthew.hernandez159@example.com,Matthew,Hernandez,2003-07-12,GERMANY,Phoenix,Platinum,16,2448.00
+michael.thomas160@example.com,Michael,Thomas,1961-12-11,UK,Sydney,Silver,87,18205.00
+david.rodriguez161@example.com,David,Rodriguez,1987-01-18,AUSTRALIA,Manchester,Gold,81,15416.00
+daniel.rodriguez162@example.com,Daniel,Rodriguez,1972-04-20,AUSTRALIA,San Diego,Platinum,3,6062.00
+sophia.jackson163@example.com,Sophia,Jackson,1992-01-02,AUSTRALIA,Manchester,Silver,68,19529.00
+daniel.moore164@example.com,Daniel,Moore,2001-05-17,NETHERLANDS,Phoenix,Bronze,55,10153.00
+charlotte.harris165@example.com,Charlotte,Harris,1961-12-07,NETHERLANDS,Dallas,Bronze,22,10467.00
+john.lewis166@example.com,John,Lewis,1976-11-13,AUSTRALIA,Lyon,Platinum,96,18208.00
+mark.garcia167@example.com,Mark,Garcia,1993-11-20,CANADA,Dallas,Gold,10,10515.00
+charles.moore168@example.com,Charles,Moore,1998-11-12,CANADA,London,Platinum,44,5819.00
+emma.robinson169@example.com,Emma,Robinson,1985-08-20,CANADA,Vancouver,Silver,85,13890.00
+david.thompson170@example.com,David,Thompson,1962-11-03,USA,Los Angeles,Gold,24,3534.00
+charlotte.miller171@example.com,Charlotte,Miller,1964-07-26,AUSTRALIA,Birmingham,Gold,81,4356.00
+john.lewis172@example.com,John,Lewis,2004-07-17,FRANCE,Toronto,Gold,4,15753.00
+robert.jackson173@example.com,Robert,Jackson,1967-05-05,JAPAN,Melbourne,Silver,63,14213.00
+donald.brown174@example.com,Donald,Brown,1972-11-19,SPAIN,Houston,Bronze,99,7772.00
+sarah.williams175@example.com,Sarah,Williams,1972-10-20,UK,Berlin,Bronze,32,922.00
+olivia.gonzalez176@example.com,Olivia,Gonzalez,1968-10-07,NETHERLANDS,Munich,Platinum,45,10698.00
+elizabeth.moore177@example.com,Elizabeth,Moore,1996-07-13,AUSTRALIA,Lyon,Bronze,93,16889.00
+ava.rodriguez178@example.com,Ava,Rodriguez,1970-11-09,USA,San Diego,Gold,59,19995.00
+amelia.taylor179@example.com,Amelia,Taylor,2004-03-21,USA,Philadelphia,Silver,12,2197.00
+mia.anderson180@example.com,Mia,Anderson,1997-04-25,FRANCE,London,Gold,34,11267.00
+elizabeth.taylor181@example.com,Elizabeth,Taylor,1961-01-14,USA,Paris,Bronze,48,18712.00
+michael.davis182@example.com,Michael,Davis,1965-11-25,USA,Chicago,Silver,90,3579.00
+ava.perez183@example.com,Ava,Perez,1987-12-21,SPAIN,Tokyo,Gold,17,16164.00
+daniel.thomas184@example.com,Daniel,Thomas,1980-08-14,FRANCE,Munich,Gold,91,12072.00
+charlotte.lewis185@example.com,Charlotte,Lewis,1998-06-07,AUSTRALIA,Melbourne,Bronze,89,7587.00
+sophia.lee186@example.com,Sophia,Lee,1993-01-26,AUSTRALIA,Melbourne,Silver,90,13322.00
+emily.martinez187@example.com,Emily,Martinez,1991-11-13,USA,Manchester,Bronze,17,14430.00
+richard.moore188@example.com,Richard,Moore,1965-04-24,CANADA,Los Angeles,Gold,35,15851.00
+richard.perez189@example.com,Richard,Perez,1960-10-02,ITALY,Vancouver,Silver,81,15700.00
+richard.wilson190@example.com,Richard,Wilson,1970-08-08,GERMANY,London,Silver,23,4213.00
+abigail.martin191@example.com,Abigail,Martin,1982-06-01,UK,Paris,Platinum,67,12937.00
+harper.ramirez192@example.com,Harper,Ramirez,1980-07-22,SPAIN,Phoenix,Platinum,86,5231.00
+john.taylor193@example.com,John,Taylor,1988-01-28,USA,Vancouver,Silver,83,16446.00
+jane.thompson194@example.com,Jane,Thompson,1971-07-12,SPAIN,San Antonio,Silver,36,12414.00
+isabella.sanchez195@example.com,Isabella,Sanchez,2004-11-27,SPAIN,Birmingham,Platinum,70,18497.00
+sarah.robinson196@example.com,Sarah,Robinson,1984-07-15,FRANCE,Munich,Platinum,72,1864.00
+emma.davis197@example.com,Emma,Davis,1994-02-18,FRANCE,Vancouver,Gold,98,3791.00
+harper.moore198@example.com,Harper,Moore,2001-12-13,SPAIN,Paris,Platinum,61,11336.00
+amelia.lewis199@example.com,Amelia,Lewis,1971-10-10,JAPAN,Philadelphia,Platinum,33,6832.00
+michael.jackson200@example.com,Michael,Jackson,1980-03-24,USA,Melbourne,Silver,81,161.00
+emily.taylor201@example.com,Emily,Taylor,1972-12-01,GERMANY,Chicago,Silver,78,1084.00
+robert.wilson202@example.com,Robert,Wilson,1981-08-17,ITALY,Houston,Bronze,67,16307.00
+richard.garcia203@example.com,Richard,Garcia,1996-09-05,UK,Birmingham,Gold,36,18492.00
+charlotte.moore204@example.com,Charlotte,Moore,1969-11-09,SPAIN,Vancouver,Silver,65,4320.00
+sarah.anderson205@example.com,Sarah,Anderson,1994-10-03,GERMANY,London,Silver,64,5850.00
+emma.johnson206@example.com,Emma,Johnson,1980-01-27,USA,San Jose,Bronze,29,11259.00
+amelia.davis207@example.com,Amelia,Davis,1985-08-24,FRANCE,Los Angeles,Gold,70,8094.00
+anthony.garcia208@example.com,Anthony,Garcia,1969-07-04,ITALY,Munich,Bronze,92,16380.00
+charles.lee209@example.com,Charles,Lee,1968-08-24,AUSTRALIA,Manchester,Gold,14,11999.00
+ava.clark210@example.com,Ava,Clark,2001-10-22,UK,Los Angeles,Gold,91,16286.00
+isabella.clark211@example.com,Isabella,Clark,1962-05-10,UK,Berlin,Gold,93,18706.00
+amelia.clark212@example.com,Amelia,Clark,1996-03-28,USA,Los Angeles,Silver,89,4208.00
+charles.martin213@example.com,Charles,Martin,1972-01-20,FRANCE,Phoenix,Platinum,56,5735.00
+william.jackson214@example.com,William,Jackson,1976-02-20,JAPAN,Munich,Gold,34,3460.00
+olivia.taylor215@example.com,Olivia,Taylor,1993-08-10,UK,London,Silver,65,12379.00
+charles.clark216@example.com,Charles,Clark,1964-09-08,GERMANY,Munich,Bronze,29,18569.00
+anthony.clark217@example.com,Anthony,Clark,1984-04-22,ITALY,Tokyo,Bronze,59,8577.00
+daniel.martinez218@example.com,Daniel,Martinez,1990-12-12,CANADA,Sydney,Bronze,85,7818.00
+harper.smith219@example.com,Harper,Smith,1961-05-15,USA,Sydney,Gold,1,15551.00
+richard.jones220@example.com,Richard,Jones,1963-08-06,FRANCE,Birmingham,Silver,47,12861.00
+harper.jackson221@example.com,Harper,Jackson,1991-12-28,USA,Lyon,Silver,61,10460.00
+elizabeth.clark222@example.com,Elizabeth,Clark,1994-08-02,FRANCE,Paris,Bronze,67,19269.00
+matthew.miller223@example.com,Matthew,Miller,1979-05-12,SPAIN,Melbourne,Gold,92,1966.00
+isabella.lopez224@example.com,Isabella,Lopez,1992-10-09,USA,Vancouver,Bronze,63,4529.00
+emma.clark225@example.com,Emma,Clark,1978-01-21,USA,Manchester,Platinum,21,17267.00
+donald.white226@example.com,Donald,White,1994-01-27,NETHERLANDS,London,Bronze,8,16171.00
+jane.gonzalez227@example.com,Jane,Gonzalez,1964-07-19,NETHERLANDS,Los Angeles,Platinum,22,14285.00
+isabella.hernandez228@example.com,Isabella,Hernandez,1990-04-11,SPAIN,Manchester,Platinum,4,2538.00
+mark.martin229@example.com,Mark,Martin,1964-04-09,USA,San Jose,Gold,87,14916.00
+emily.davis230@example.com,Emily,Davis,1972-07-03,CANADA,Berlin,Gold,12,10737.00
+mark.moore231@example.com,Mark,Moore,1970-03-21,UK,Berlin,Silver,74,19534.00
+daniel.jones232@example.com,Daniel,Jones,2003-10-05,FRANCE,Dallas,Silver,84,5485.00
+anthony.thompson233@example.com,Anthony,Thompson,1980-11-17,UK,Philadelphia,Silver,71,8194.00
+anthony.moore234@example.com,Anthony,Moore,1980-03-03,FRANCE,Sydney,Bronze,91,1309.00
+emily.lee235@example.com,Emily,Lee,1977-01-06,ITALY,Paris,Gold,26,12768.00
+anthony.miller236@example.com,Anthony,Miller,1965-06-27,FRANCE,London,Platinum,22,9119.00
+richard.ramirez237@example.com,Richard,Ramirez,1984-10-24,FRANCE,Dallas,Gold,10,16511.00
+matthew.williams238@example.com,Matthew,Williams,1993-08-08,FRANCE,London,Gold,27,11799.00
+david.thomas239@example.com,David,Thomas,1984-08-13,CANADA,San Diego,Gold,51,18487.00
+matthew.white240@example.com,Matthew,White,2004-04-19,CANADA,Houston,Silver,98,16237.00
+donald.hernandez241@example.com,Donald,Hernandez,1972-02-22,UK,Los Angeles,Gold,11,3474.00
+charlotte.robinson242@example.com,Charlotte,Robinson,1973-01-10,UK,Lyon,Silver,93,9384.00
+mark.clark243@example.com,Mark,Clark,1966-01-12,USA,Toronto,Silver,82,19757.00
+sarah.wilson244@example.com,Sarah,Wilson,1980-10-09,GERMANY,London,Bronze,79,14189.00
+amelia.lewis245@example.com,Amelia,Lewis,1985-07-17,GERMANY,Munich,Platinum,47,5250.00
+sarah.brown246@example.com,Sarah,Brown,1963-04-13,AUSTRALIA,Chicago,Bronze,22,19388.00
+richard.gonzalez247@example.com,Richard,Gonzalez,1964-12-11,SPAIN,Melbourne,Gold,53,7131.00
+william.thompson248@example.com,William,Thompson,1973-04-16,SPAIN,San Diego,Gold,93,11880.00
+olivia.clark249@example.com,Olivia,Clark,1969-02-28,ITALY,Melbourne,Platinum,53,10012.00
+john.smith250@example.com,John,Smith,1982-10-16,CANADA,Houston,Gold,65,7318.00
+david.miller251@example.com,David,Miller,1971-08-27,FRANCE,Melbourne,Bronze,21,6965.00
+sophia.johnson252@example.com,Sophia,Johnson,1977-12-07,USA,Phoenix,Bronze,97,8742.00
+jane.thomas253@example.com,Jane,Thomas,2000-08-10,UK,Phoenix,Gold,88,19873.00
+charlotte.garcia254@example.com,Charlotte,Garcia,1985-10-27,CANADA,Los Angeles,Silver,52,4612.00
+mark.davis255@example.com,Mark,Davis,1989-09-28,ITALY,Philadelphia,Silver,65,4152.00
+donald.jackson256@example.com,Donald,Jackson,1969-01-15,JAPAN,Berlin,Gold,6,14912.00
+ava.johnson257@example.com,Ava,Johnson,1968-05-23,JAPAN,Phoenix,Bronze,70,16489.00
+abigail.taylor258@example.com,Abigail,Taylor,2003-09-27,SPAIN,Phoenix,Platinum,18,15691.00
+sophia.johnson259@example.com,Sophia,Johnson,1991-03-06,USA,Toronto,Silver,69,12676.00
+isabella.williams260@example.com,Isabella,Williams,1969-09-15,UK,Tokyo,Platinum,39,3208.00
+mark.garcia261@example.com,Mark,Garcia,1979-06-20,USA,Melbourne,Bronze,91,2305.00
+abigail.ramirez262@example.com,Abigail,Ramirez,1992-11-03,AUSTRALIA,Munich,Silver,96,12639.00
+anthony.garcia263@example.com,Anthony,Garcia,2001-02-14,JAPAN,Lyon,Silver,82,2284.00
+robert.wilson264@example.com,Robert,Wilson,1987-06-22,SPAIN,San Jose,Platinum,85,13877.00
+elizabeth.wilson265@example.com,Elizabeth,Wilson,1997-09-21,NETHERLANDS,Manchester,Platinum,30,12304.00
+richard.martin266@example.com,Richard,Martin,1987-01-01,USA,Manchester,Bronze,12,17836.00
+jane.martin267@example.com,Jane,Martin,1967-11-04,FRANCE,Los Angeles,Gold,96,6055.00
+david.gonzalez268@example.com,David,Gonzalez,1979-06-01,NETHERLANDS,Chicago,Gold,75,18664.00
+isabella.gonzalez269@example.com,Isabella,Gonzalez,1997-07-15,FRANCE,Tokyo,Bronze,82,4290.00
+emma.gonzalez270@example.com,Emma,Gonzalez,1997-11-09,JAPAN,Melbourne,Platinum,26,586.00
+donald.martinez271@example.com,Donald,Martinez,1984-04-17,USA,Los Angeles,Gold,55,9802.00
+david.thomas272@example.com,David,Thomas,1982-09-20,JAPAN,San Diego,Gold,50,4646.00
+harper.anderson273@example.com,Harper,Anderson,1979-01-14,SPAIN,Munich,Platinum,8,11365.00
+jane.ramirez274@example.com,Jane,Ramirez,1973-12-15,NETHERLANDS,San Diego,Platinum,93,11281.00
+isabella.perez275@example.com,Isabella,Perez,1977-05-28,NETHERLANDS,Lyon,Gold,87,18851.00
+emma.harris276@example.com,Emma,Harris,1969-12-28,FRANCE,New York,Platinum,4,14776.00
+olivia.moore277@example.com,Olivia,Moore,1962-01-09,FRANCE,Vancouver,Gold,42,12003.00
+abigail.hernandez278@example.com,Abigail,Hernandez,1964-06-07,FRANCE,San Antonio,Silver,56,16690.00
+matthew.harris279@example.com,Matthew,Harris,2002-11-27,AUSTRALIA,San Antonio,Gold,97,8360.00
+david.ramirez280@example.com,David,Ramirez,1970-12-09,JAPAN,Phoenix,Platinum,68,4171.00
+olivia.sanchez281@example.com,Olivia,Sanchez,1995-10-21,FRANCE,Munich,Bronze,70,18855.00
+jane.ramirez282@example.com,Jane,Ramirez,1991-05-01,JAPAN,Sydney,Platinum,40,19113.00
+james.sanchez283@example.com,James,Sanchez,2002-08-25,SPAIN,London,Silver,12,363.00
+sophia.garcia284@example.com,Sophia,Garcia,1970-06-28,NETHERLANDS,Los Angeles,Silver,5,15186.00
+jane.robinson285@example.com,Jane,Robinson,1963-12-16,AUSTRALIA,Sydney,Bronze,83,18634.00
+donald.robinson286@example.com,Donald,Robinson,1987-09-14,GERMANY,Dallas,Bronze,11,4787.00
+mark.moore287@example.com,Mark,Moore,1987-04-16,NETHERLANDS,San Jose,Bronze,42,9534.00
+elizabeth.robinson288@example.com,Elizabeth,Robinson,1979-03-23,JAPAN,Philadelphia,Bronze,24,18675.00
+thomas.davis289@example.com,Thomas,Davis,1978-07-13,UK,Vancouver,Platinum,88,5953.00
+daniel.lee290@example.com,Daniel,Lee,1968-09-16,AUSTRALIA,Houston,Silver,38,16765.00
+mark.lee291@example.com,Mark,Lee,1978-07-04,NETHERLANDS,Tokyo,Bronze,63,4792.00
+donald.jackson292@example.com,Donald,Jackson,1979-01-11,USA,Lyon,Bronze,38,4794.00
+emma.lee293@example.com,Emma,Lee,1993-06-14,NETHERLANDS,New York,Gold,62,1934.00
+richard.martin294@example.com,Richard,Martin,1983-03-16,NETHERLANDS,Chicago,Silver,4,8630.00
+abigail.wilson295@example.com,Abigail,Wilson,1969-09-05,CANADA,Toronto,Platinum,89,16283.00
+michael.martin296@example.com,Michael,Martin,1980-01-14,ITALY,Los Angeles,Gold,11,9846.00
+david.lewis297@example.com,David,Lewis,1994-10-19,UK,San Jose,Platinum,82,8952.00
+mark.gonzalez298@example.com,Mark,Gonzalez,1993-03-24,SPAIN,Birmingham,Platinum,24,10048.00
+charles.davis299@example.com,Charles,Davis,1990-04-21,AUSTRALIA,Manchester,Platinum,45,11666.00
+charles.sanchez300@example.com,Charles,Sanchez,1964-04-28,AUSTRALIA,Berlin,Gold,47,17982.00
+sarah.jackson301@example.com,Sarah,Jackson,2001-10-02,ITALY,Chicago,Silver,26,6316.00
+anthony.taylor302@example.com,Anthony,Taylor,1973-12-09,JAPAN,Melbourne,Bronze,4,413.00
+richard.white303@example.com,Richard,White,1968-07-23,USA,Chicago,Gold,53,18376.00
+ava.lopez304@example.com,Ava,Lopez,1969-11-28,AUSTRALIA,Vancouver,Silver,25,12622.00
+james.moore305@example.com,James,Moore,1983-02-28,CANADA,San Diego,Bronze,92,1314.00
+thomas.sanchez306@example.com,Thomas,Sanchez,1979-08-16,UK,Berlin,Gold,90,3956.00
+evelyn.hernandez307@example.com,Evelyn,Hernandez,2004-01-06,USA,London,Gold,37,12800.00
+david.moore308@example.com,David,Moore,1983-11-21,FRANCE,San Jose,Bronze,79,18712.00
+joseph.sanchez309@example.com,Joseph,Sanchez,1968-02-16,CANADA,Toronto,Bronze,79,14593.00
+emily.rodriguez310@example.com,Emily,Rodriguez,1998-06-08,GERMANY,Chicago,Bronze,93,13503.00
+matthew.martin311@example.com,Matthew,Martin,1977-07-22,FRANCE,Vancouver,Gold,22,17391.00
+sarah.johnson312@example.com,Sarah,Johnson,1976-08-19,NETHERLANDS,Los Angeles,Gold,2,5819.00
+thomas.wilson313@example.com,Thomas,Wilson,1960-10-24,CANADA,San Diego,Bronze,6,10998.00
+ava.lewis314@example.com,Ava,Lewis,1965-02-15,CANADA,Paris,Silver,36,7868.00
+ava.jones315@example.com,Ava,Jones,1977-09-06,UK,Philadelphia,Bronze,36,11617.00
+evelyn.jackson316@example.com,Evelyn,Jackson,1985-05-25,FRANCE,Lyon,Platinum,88,18222.00
+harper.hernandez317@example.com,Harper,Hernandez,1979-10-12,USA,Los Angeles,Gold,30,13574.00
+joseph.clark318@example.com,Joseph,Clark,1983-09-27,NETHERLANDS,Philadelphia,Platinum,56,13319.00
+sarah.williams319@example.com,Sarah,Williams,1960-04-23,SPAIN,New York,Silver,19,9480.00
+elizabeth.lee320@example.com,Elizabeth,Lee,1995-07-06,GERMANY,Vancouver,Silver,100,19459.00
+james.moore321@example.com,James,Moore,2000-01-02,NETHERLANDS,Manchester,Platinum,47,7064.00
+ava.johnson322@example.com,Ava,Johnson,1966-12-16,FRANCE,Dallas,Silver,94,4316.00
+harper.johnson323@example.com,Harper,Johnson,1993-12-01,ITALY,Houston,Gold,15,12693.00
+elizabeth.ramirez324@example.com,Elizabeth,Ramirez,1975-05-01,GERMANY,Melbourne,Bronze,17,17160.00
+anthony.rodriguez325@example.com,Anthony,Rodriguez,1964-07-01,SPAIN,Manchester,Silver,94,17736.00
+mia.gonzalez326@example.com,Mia,Gonzalez,1980-02-27,JAPAN,Paris,Silver,26,17930.00
+harper.smith327@example.com,Harper,Smith,1964-06-03,UK,London,Silver,48,275.00
+robert.jackson328@example.com,Robert,Jackson,1964-08-15,FRANCE,Dallas,Gold,14,1510.00
+isabella.gonzalez329@example.com,Isabella,Gonzalez,1977-04-09,JAPAN,Philadelphia,Platinum,4,7853.00
+matthew.davis330@example.com,Matthew,Davis,1993-07-15,JAPAN,Tokyo,Silver,96,2699.00
+jane.johnson331@example.com,Jane,Johnson,1992-06-21,JAPAN,Phoenix,Silver,53,4420.00
+thomas.williams332@example.com,Thomas,Williams,1966-04-19,CANADA,Toronto,Platinum,5,12692.00
+mark.jones333@example.com,Mark,Jones,1983-11-24,JAPAN,Houston,Bronze,32,10527.00
+sarah.lee334@example.com,Sarah,Lee,1988-10-18,USA,Paris,Platinum,1,7074.00
+john.taylor335@example.com,John,Taylor,1985-08-20,AUSTRALIA,Philadelphia,Silver,53,17267.00
+michael.thompson336@example.com,Michael,Thompson,1963-08-08,FRANCE,New York,Silver,85,6408.00
+emily.smith337@example.com,Emily,Smith,1995-10-10,NETHERLANDS,London,Silver,48,6511.00
+richard.ramirez338@example.com,Richard,Ramirez,1966-06-12,SPAIN,Sydney,Bronze,76,5766.00
+charlotte.wilson339@example.com,Charlotte,Wilson,1993-08-02,ITALY,Sydney,Platinum,65,5395.00
+jane.thomas340@example.com,Jane,Thomas,2003-08-02,USA,New York,Silver,27,9366.00
+robert.lewis341@example.com,Robert,Lewis,1995-10-10,GERMANY,Lyon,Gold,72,15812.00
+mark.lee342@example.com,Mark,Lee,1968-01-15,JAPAN,Lyon,Platinum,25,18715.00
+mark.martinez343@example.com,Mark,Martinez,1972-02-24,ITALY,Munich,Platinum,71,16548.00
+olivia.johnson344@example.com,Olivia,Johnson,1966-09-08,ITALY,Birmingham,Platinum,93,4842.00
+donald.gonzalez345@example.com,Donald,Gonzalez,1975-03-01,ITALY,San Jose,Platinum,90,1039.00
+isabella.taylor346@example.com,Isabella,Taylor,1991-10-13,JAPAN,Los Angeles,Platinum,10,11288.00
+matthew.smith347@example.com,Matthew,Smith,1971-06-19,AUSTRALIA,Chicago,Silver,92,3751.00
+evelyn.thompson348@example.com,Evelyn,Thompson,1986-09-27,UK,Tokyo,Platinum,78,1172.00
+thomas.jackson349@example.com,Thomas,Jackson,1987-06-09,AUSTRALIA,Vancouver,Silver,35,13559.00
+donald.davis350@example.com,Donald,Davis,1995-03-11,AUSTRALIA,Manchester,Silver,33,6868.00
+isabella.williams351@example.com,Isabella,Williams,1986-06-17,NETHERLANDS,Houston,Gold,95,3160.00
+mark.anderson352@example.com,Mark,Anderson,1968-11-25,USA,Sydney,Platinum,75,1228.00
+harper.clark353@example.com,Harper,Clark,1965-01-05,NETHERLANDS,San Jose,Platinum,41,11176.00
+evelyn.smith354@example.com,Evelyn,Smith,2003-10-14,AUSTRALIA,Vancouver,Platinum,100,9627.00
+anthony.williams355@example.com,Anthony,Williams,1973-01-19,ITALY,London,Gold,70,12071.00
+emma.lopez356@example.com,Emma,Lopez,1993-04-13,GERMANY,Paris,Platinum,92,2281.00
+donald.gonzalez357@example.com,Donald,Gonzalez,1965-07-04,USA,Chicago,Gold,53,14444.00
+isabella.brown358@example.com,Isabella,Brown,2004-05-09,UK,Chicago,Silver,89,17864.00
+thomas.thompson359@example.com,Thomas,Thompson,1960-04-06,CANADA,Munich,Silver,90,18976.00
+matthew.hernandez360@example.com,Matthew,Hernandez,1985-12-16,NETHERLANDS,New York,Platinum,7,14622.00
+ava.davis361@example.com,Ava,Davis,1999-12-22,CANADA,Sydney,Bronze,19,3996.00
+william.ramirez362@example.com,William,Ramirez,1965-04-10,UK,Manchester,Platinum,67,9404.00
+elizabeth.gonzalez363@example.com,Elizabeth,Gonzalez,1963-11-10,GERMANY,Dallas,Silver,66,16210.00
+thomas.wilson364@example.com,Thomas,Wilson,1960-05-08,FRANCE,Toronto,Platinum,6,10270.00
+donald.moore365@example.com,Donald,Moore,1982-09-06,USA,Paris,Gold,19,6936.00
+joseph.jones366@example.com,Joseph,Jones,1999-11-05,NETHERLANDS,Houston,Gold,73,11591.00
+anthony.robinson367@example.com,Anthony,Robinson,1969-01-27,CANADA,San Jose,Bronze,44,10653.00
+jane.wilson368@example.com,Jane,Wilson,1962-06-14,USA,San Antonio,Silver,3,13496.00
+mia.davis369@example.com,Mia,Davis,1960-06-21,FRANCE,Tokyo,Gold,71,1093.00
+sarah.gonzalez370@example.com,Sarah,Gonzalez,1993-07-01,NETHERLANDS,Sydney,Platinum,74,10203.00
+charlotte.ramirez371@example.com,Charlotte,Ramirez,1977-01-20,ITALY,Vancouver,Silver,59,14481.00
+james.davis372@example.com,James,Davis,1996-08-14,NETHERLANDS,San Antonio,Platinum,46,798.00
+abigail.lopez373@example.com,Abigail,Lopez,1978-10-02,CANADA,Los Angeles,Silver,70,14410.00
+mark.sanchez374@example.com,Mark,Sanchez,1968-06-17,CANADA,Phoenix,Gold,57,5033.00
+david.moore375@example.com,David,Moore,1974-06-16,ITALY,Vancouver,Silver,73,7167.00
+mark.perez376@example.com,Mark,Perez,1968-10-04,GERMANY,Sydney,Silver,93,16533.00
+matthew.lewis377@example.com,Matthew,Lewis,1995-01-14,JAPAN,London,Bronze,38,12054.00
+joseph.perez378@example.com,Joseph,Perez,1970-09-02,USA,Birmingham,Gold,48,12258.00
+anthony.rodriguez379@example.com,Anthony,Rodriguez,1960-10-19,NETHERLANDS,Lyon,Bronze,53,15089.00
+charles.johnson380@example.com,Charles,Johnson,1967-01-15,ITALY,Vancouver,Bronze,2,12061.00
+james.miller381@example.com,James,Miller,1961-04-06,AUSTRALIA,London,Platinum,22,2330.00
+william.garcia382@example.com,William,Garcia,1975-07-20,GERMANY,Chicago,Platinum,93,259.00
+robert.garcia383@example.com,Robert,Garcia,1987-02-10,USA,Phoenix,Platinum,63,13165.00
+sarah.white384@example.com,Sarah,White,1963-09-26,USA,New York,Silver,29,14409.00
+amelia.lewis385@example.com,Amelia,Lewis,1986-02-22,USA,San Antonio,Platinum,60,11279.00
+robert.wilson386@example.com,Robert,Wilson,1998-09-15,GERMANY,Tokyo,Silver,78,6532.00
+mark.ramirez387@example.com,Mark,Ramirez,1966-05-09,GERMANY,Lyon,Silver,46,1117.00
+william.smith388@example.com,William,Smith,1962-07-16,AUSTRALIA,Vancouver,Bronze,90,8460.00
+daniel.moore389@example.com,Daniel,Moore,1998-03-19,SPAIN,Chicago,Platinum,41,16413.00
+emily.taylor390@example.com,Emily,Taylor,1986-11-27,AUSTRALIA,Dallas,Platinum,70,2594.00
+john.taylor391@example.com,John,Taylor,1985-03-04,JAPAN,Houston,Platinum,50,18811.00
+elizabeth.martin392@example.com,Elizabeth,Martin,1969-02-26,UK,Birmingham,Platinum,18,3770.00
+mark.rodriguez393@example.com,Mark,Rodriguez,1968-02-03,FRANCE,Paris,Silver,6,6585.00
+amelia.harris394@example.com,Amelia,Harris,1995-08-16,USA,San Jose,Silver,68,569.00
+sophia.jackson395@example.com,Sophia,Jackson,1967-10-08,FRANCE,Philadelphia,Gold,63,14010.00
+jane.anderson396@example.com,Jane,Anderson,1986-08-10,SPAIN,Berlin,Bronze,20,11512.00
+matthew.thompson397@example.com,Matthew,Thompson,1971-05-22,CANADA,Toronto,Platinum,100,4164.00
+amelia.gonzalez398@example.com,Amelia,Gonzalez,1962-10-07,UK,London,Gold,63,10579.00
+elizabeth.white399@example.com,Elizabeth,White,1977-07-18,NETHERLANDS,New York,Platinum,77,10624.00
+joseph.clark400@example.com,Joseph,Clark,1981-09-13,FRANCE,Toronto,Platinum,76,11752.00
+sophia.davis401@example.com,Sophia,Davis,1961-12-13,ITALY,Los Angeles,Bronze,19,19077.00
+charles.johnson402@example.com,Charles,Johnson,1971-10-03,USA,Phoenix,Gold,88,18780.00
+amelia.lee403@example.com,Amelia,Lee,1982-06-01,JAPAN,Berlin,Silver,44,19743.00
+emily.robinson404@example.com,Emily,Robinson,1982-03-11,GERMANY,Philadelphia,Platinum,40,9060.00
+isabella.williams405@example.com,Isabella,Williams,1979-07-11,USA,Los Angeles,Bronze,23,6274.00
+charlotte.white406@example.com,Charlotte,White,1987-09-22,JAPAN,Tokyo,Gold,66,15572.00
+james.white407@example.com,James,White,1980-11-28,SPAIN,Phoenix,Gold,24,6776.00
+donald.moore408@example.com,Donald,Moore,1969-04-05,UK,Tokyo,Silver,79,19252.00
+daniel.martin409@example.com,Daniel,Martin,1985-02-14,USA,Philadelphia,Bronze,25,8336.00
+amelia.martin410@example.com,Amelia,Martin,1980-02-17,SPAIN,Lyon,Bronze,29,10905.00
+sarah.hernandez411@example.com,Sarah,Hernandez,1996-12-25,SPAIN,Manchester,Bronze,36,4493.00
+ava.robinson412@example.com,Ava,Robinson,1997-10-08,GERMANY,Manchester,Bronze,2,5687.00
+william.martin413@example.com,William,Martin,2004-09-26,FRANCE,Phoenix,Gold,88,7687.00
+robert.taylor414@example.com,Robert,Taylor,1965-08-01,AUSTRALIA,Berlin,Gold,90,2497.00
+john.williams415@example.com,John,Williams,1977-03-14,SPAIN,San Antonio,Silver,81,19417.00
+sarah.thompson416@example.com,Sarah,Thompson,1991-02-17,SPAIN,Tokyo,Bronze,28,2201.00
+evelyn.johnson417@example.com,Evelyn,Johnson,1986-02-27,CANADA,London,Gold,94,19166.00
+jane.sanchez418@example.com,Jane,Sanchez,1965-12-24,GERMANY,New York,Platinum,17,6299.00
+jane.wilson419@example.com,Jane,Wilson,1971-12-17,ITALY,Manchester,Bronze,68,19727.00
+daniel.sanchez420@example.com,Daniel,Sanchez,1979-02-12,USA,Toronto,Silver,84,10296.00
+anthony.gonzalez421@example.com,Anthony,Gonzalez,1980-02-05,ITALY,Paris,Gold,69,13373.00
+william.moore422@example.com,William,Moore,1999-05-06,CANADA,New York,Bronze,47,6504.00
+daniel.martinez423@example.com,Daniel,Martinez,1997-01-16,JAPAN,Sydney,Platinum,32,7546.00
+emma.williams424@example.com,Emma,Williams,1964-07-07,USA,San Jose,Bronze,22,5359.00
+daniel.taylor425@example.com,Daniel,Taylor,1969-04-05,UK,San Antonio,Bronze,23,5973.00
+emma.johnson426@example.com,Emma,Johnson,1974-03-01,ITALY,San Jose,Platinum,100,15269.00
+joseph.lewis427@example.com,Joseph,Lewis,2001-01-18,GERMANY,New York,Bronze,89,17490.00
+mia.jones428@example.com,Mia,Jones,1960-11-15,SPAIN,Dallas,Silver,95,13292.00
+sarah.thompson429@example.com,Sarah,Thompson,2001-10-23,JAPAN,Paris,Platinum,34,7615.00
+mark.clark430@example.com,Mark,Clark,1999-12-13,ITALY,Philadelphia,Silver,36,7718.00
+elizabeth.lewis431@example.com,Elizabeth,Lewis,1997-11-14,CANADA,Philadelphia,Silver,90,3319.00
+abigail.moore432@example.com,Abigail,Moore,1980-11-27,ITALY,Sydney,Gold,37,19308.00
+john.thomas433@example.com,John,Thomas,1992-04-25,FRANCE,San Diego,Bronze,53,8735.00
+daniel.perez434@example.com,Daniel,Perez,1978-09-01,FRANCE,New York,Platinum,15,10152.00
+william.rodriguez435@example.com,William,Rodriguez,1970-05-25,JAPAN,Tokyo,Gold,1,710.00
+elizabeth.rodriguez436@example.com,Elizabeth,Rodriguez,1995-03-22,CANADA,London,Platinum,80,507.00
+evelyn.lewis437@example.com,Evelyn,Lewis,1970-09-11,NETHERLANDS,San Diego,Silver,6,9543.00
+jane.taylor438@example.com,Jane,Taylor,1960-08-07,JAPAN,Chicago,Gold,53,18642.00
+donald.taylor439@example.com,Donald,Taylor,1978-05-24,USA,Sydney,Gold,26,14663.00
+abigail.taylor440@example.com,Abigail,Taylor,1968-05-28,GERMANY,New York,Platinum,65,411.00
+daniel.lopez441@example.com,Daniel,Lopez,1982-06-19,CANADA,Lyon,Bronze,90,7891.00
+evelyn.smith442@example.com,Evelyn,Smith,1971-04-13,ITALY,Dallas,Silver,57,13100.00
+donald.perez443@example.com,Donald,Perez,1966-08-09,USA,Vancouver,Bronze,35,2741.00
+sarah.perez444@example.com,Sarah,Perez,1988-01-26,USA,Philadelphia,Silver,77,10411.00
+abigail.hernandez445@example.com,Abigail,Hernandez,2003-04-01,FRANCE,Birmingham,Silver,97,3731.00
+donald.lopez446@example.com,Donald,Lopez,1964-12-23,SPAIN,London,Bronze,50,8539.00
+sarah.white447@example.com,Sarah,White,1976-10-11,GERMANY,Chicago,Silver,91,9763.00
+elizabeth.rodriguez448@example.com,Elizabeth,Rodriguez,1982-03-04,UK,Chicago,Gold,84,13315.00
+robert.moore449@example.com,Robert,Moore,2003-07-17,AUSTRALIA,Dallas,Bronze,87,19441.00
+harper.lee450@example.com,Harper,Lee,1960-06-08,FRANCE,Vancouver,Bronze,57,13820.00
+isabella.lewis451@example.com,Isabella,Lewis,1988-04-02,FRANCE,San Diego,Bronze,11,4210.00
+michael.jackson452@example.com,Michael,Jackson,1964-07-19,ITALY,Lyon,Bronze,78,8910.00
+olivia.jackson453@example.com,Olivia,Jackson,1989-12-16,USA,San Jose,Bronze,47,18585.00
+john.ramirez454@example.com,John,Ramirez,1994-08-23,JAPAN,New York,Gold,70,2995.00
+abigail.harris455@example.com,Abigail,Harris,1977-09-06,GERMANY,Toronto,Platinum,93,8751.00
+david.martinez456@example.com,David,Martinez,1992-08-11,AUSTRALIA,Chicago,Platinum,15,4370.00
+ava.sanchez457@example.com,Ava,Sanchez,2000-01-08,CANADA,New York,Silver,28,19410.00
+mia.anderson458@example.com,Mia,Anderson,1977-06-02,GERMANY,Vancouver,Gold,49,17522.00
+joseph.miller459@example.com,Joseph,Miller,2002-07-24,FRANCE,San Jose,Silver,19,8190.00
+charlotte.martinez460@example.com,Charlotte,Martinez,1978-01-21,CANADA,Tokyo,Platinum,86,6879.00
+sarah.lopez461@example.com,Sarah,Lopez,1975-10-12,CANADA,Berlin,Platinum,53,11801.00
+amelia.brown462@example.com,Amelia,Brown,1981-10-27,JAPAN,Chicago,Gold,96,15406.00
+charles.lopez463@example.com,Charles,Lopez,1996-08-28,UK,London,Gold,58,2655.00
+elizabeth.martin464@example.com,Elizabeth,Martin,1960-03-28,USA,Phoenix,Platinum,99,16151.00
+mia.garcia465@example.com,Mia,Garcia,1994-12-08,USA,London,Gold,24,3320.00
+isabella.martin466@example.com,Isabella,Martin,2001-11-06,SPAIN,Toronto,Silver,14,19163.00
+sophia.wilson467@example.com,Sophia,Wilson,1978-03-17,CANADA,San Jose,Bronze,10,6205.00
+elizabeth.hernandez468@example.com,Elizabeth,Hernandez,1973-12-09,JAPAN,Tokyo,Bronze,10,9999.00
+william.williams469@example.com,William,Williams,1974-03-12,SPAIN,Manchester,Platinum,3,15523.00
+harper.williams470@example.com,Harper,Williams,1994-10-17,ITALY,Paris,Platinum,94,6643.00
+donald.harris471@example.com,Donald,Harris,1981-06-27,FRANCE,Birmingham,Silver,69,4611.00
+john.anderson472@example.com,John,Anderson,1981-11-21,USA,Melbourne,Bronze,19,11188.00
+emma.lee473@example.com,Emma,Lee,1991-12-15,USA,Munich,Bronze,12,3480.00
+charlotte.jackson474@example.com,Charlotte,Jackson,1978-11-18,AUSTRALIA,Birmingham,Bronze,100,19553.00
+amelia.jones475@example.com,Amelia,Jones,1998-11-02,UK,Vancouver,Bronze,55,18248.00
+isabella.martin476@example.com,Isabella,Martin,1978-12-06,USA,London,Gold,62,15417.00
+mia.martinez477@example.com,Mia,Martinez,2004-12-24,JAPAN,Phoenix,Silver,77,2414.00
+harper.moore478@example.com,Harper,Moore,2003-09-21,SPAIN,Birmingham,Platinum,24,10309.00
+amelia.moore479@example.com,Amelia,Moore,1986-11-22,CANADA,Dallas,Bronze,94,7684.00
+ava.harris480@example.com,Ava,Harris,1983-07-18,AUSTRALIA,Munich,Platinum,5,9418.00
+sophia.thomas481@example.com,Sophia,Thomas,1984-02-02,ITALY,Tokyo,Bronze,94,13375.00
+john.williams482@example.com,John,Williams,1979-10-19,ITALY,London,Gold,86,15845.00
+richard.johnson483@example.com,Richard,Johnson,2001-08-09,GERMANY,Birmingham,Silver,28,7301.00
+matthew.wilson484@example.com,Matthew,Wilson,1980-07-16,AUSTRALIA,Birmingham,Silver,83,6535.00
+john.smith485@example.com,John,Smith,1976-06-05,GERMANY,Chicago,Silver,26,14048.00
+emma.taylor486@example.com,Emma,Taylor,1985-11-28,AUSTRALIA,San Jose,Silver,20,3942.00
+amelia.robinson487@example.com,Amelia,Robinson,1972-07-02,JAPAN,Vancouver,Gold,6,14399.00
+mia.clark488@example.com,Mia,Clark,1982-08-15,SPAIN,Philadelphia,Silver,63,17883.00
+john.williams489@example.com,John,Williams,1973-12-26,UK,Houston,Bronze,27,11184.00
+donald.jackson490@example.com,Donald,Jackson,1991-08-25,GERMANY,Los Angeles,Bronze,83,7431.00
+david.garcia491@example.com,David,Garcia,1986-05-23,ITALY,Lyon,Bronze,27,17410.00
+elizabeth.ramirez492@example.com,Elizabeth,Ramirez,1998-02-23,FRANCE,Sydney,Gold,50,3334.00
+michael.lopez493@example.com,Michael,Lopez,1961-02-15,GERMANY,Phoenix,Silver,6,8386.00
+emily.thomas494@example.com,Emily,Thomas,1989-02-28,ITALY,Phoenix,Gold,88,13611.00
+elizabeth.smith495@example.com,Elizabeth,Smith,1965-09-24,JAPAN,Paris,Bronze,8,15927.00
+charles.harris496@example.com,Charles,Harris,1982-11-10,CANADA,Melbourne,Silver,12,3111.00
+richard.robinson497@example.com,Richard,Robinson,1982-02-24,AUSTRALIA,Phoenix,Gold,5,11857.00
+emma.jones498@example.com,Emma,Jones,1982-09-10,SPAIN,Sydney,Gold,38,8097.00
+amelia.jones499@example.com,Amelia,Jones,1995-11-12,SPAIN,Birmingham,Silver,55,8478.00
+robert.clark500@example.com,Robert,Clark,1988-09-18,UK,Manchester,Platinum,65,16702.00
