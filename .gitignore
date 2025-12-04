@@ -367,7 +367,6 @@ secrets.json
 # Export files
 exports/
 *.xlsx
-*.csv
 *.json.backup
 
 # OS generated files
